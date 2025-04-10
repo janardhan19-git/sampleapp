@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlex Gym - Workout Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>FitFlex Gym</h1>
+            <p>Your personalized workout planner</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#" class="active" data-section="home">Home</a></li>
+                <li><a href="#" data-section="workouts">Workouts</a></li>
+                <li><a href="#" data-section="planner">Plan Workout</a></li>
+                <li><a href="#" data-section="contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <h2>Transform Your Body</h2>
+                <p>Custom workout plans tailored to your fitness goals</p>
+                <button class="btn start-now" data-section="planner">Start Now</button>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Equipment Guides</h3>
+                    <p>Learn proper use of all gym equipment</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>Workout Plans</h3>
+                    <p>Pre-designed routines for all levels</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Proper Form</h3>
+                    <p>Detailed exercise instructions</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workouts Section -->
+        <section id="workouts" class="section">
+            <h2>Equipment Workouts</h2>
+            <div class="equipment-tabs">
+                <button class="tab-btn active" data-category="free-weights">Free Weights</button>
+                <button class="tab-btn" data-category="machines">Machines</button>
+                <button class="tab-btn" data-category="cardio">Cardio</button>
+                <button class="tab-btn" data-category="bodyweight">Bodyweight</button>
+            </div>
+
+            <div class="workout-categories">
+                <!-- Free Weights -->
+                <div class="workout-category active" id="free-weights">
+                    <div class="exercise">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b" alt="Dumbbell Bench Press">
+                        <div class="exercise-details">
+                            <h3>Dumbbell Bench Press</h3>
+                            <div class="exercise-meta">
+                                <span><i class="fas fa-dumbbell"></i> Chest</span>
+                                <span><i class="fas fa-fire"></i> Intermediate</span>
+                            </div>
+                            <p>Lie on bench with dumbbells at shoulder width. Press weights up until arms are extended, then lower slowly.</p>
+                            <ul class="exercise-steps">
+                                <li>3-4 sets of 8-12 reps</li>
+                                <li>60-90 sec rest between sets</li>
+                                <li>Focus on controlled movement</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="exercise">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c6b2e0f8239f" alt="Barbell Squat">
+                        <div class="exercise-details">
+                            <h3>Barbell Squat</h3>
+                            <div class="exercise-meta">
+                                <span><i class="fas fa-dumbbell"></i> Legs</span>
+                                <span><i class="fas fa-fire"></i> Advanced</span>
+                            </div>
+                            <p>Stand with barbell across upper back, feet shoulder-width apart. Lower hips until thighs are parallel to floor, then drive up.</p>
+                            <ul class="exercise-steps">
+                                <li>4 sets of 6-10 reps</li>
+                                <li>2-3 min rest between sets</li>
+                                <li>Keep chest up and core tight</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Machines -->
+                <div class="workout-category" id="machines">
+                    <div class="exercise">
+                        <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c" alt="Lat Pulldown">
+                        <div class="exercise-details">
+                            <h3>Lat Pulldown</h3>
+                            <div class="exercise-meta">
+                                <span><i class="fas fa-dumbbell"></i> Back</span>
+                                <span><i class="fas fa-fire"></i> Beginner</span>
+                            </div>
+                            <p>Sit at pulldown station, grip bar wider than shoulders. Pull bar down to chest, then slowly return.</p>
+                            <ul class="exercise-steps">
+                                <li>3 sets of 10-12 reps</li>
+                                <li>60 sec rest between sets</li>
+                                <li>Engage back muscles, not arms</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More categories would go here -->
+            </div>
+        </section>
+
+        <!-- Planner Section -->
+        <section id="planner" class="section">
+            <h2>Plan Your Workout</h2>
+            
+            <div class="planner-steps">
+                <div class="step active" data-step="1">
+                    <span>1</span>
+                    <p>Your Details</p>
+                </div>
+                <div class="step" data-step="2">
+                    <span>2</span>
+                    <p>Select Exercises</p>
+                </div>
+                <div class="step" data-step="3">
+                    <span>3</span>
+                    <p>Workout Plan</p>
+                </div>
+            </div>
+
+            <div class="step-content">
+                <!-- Step 1: User Details -->
+                <div class="step-panel active" data-step="1">
+                    <form id="user-details">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="level">Fitness Level</label>
+                            <select id="level" required>
+                                <option value="">Select</option>
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="focus">Workout Focus</label>
+                            <select id="focus" required>
+                                <option value="">Select</option>
+                                <option value="strength">Strength</option>
+                                <option value="hypertrophy">Muscle Growth</option>
+                                <option value="endurance">Endurance</option>
+                                <option value="fat-loss">Fat Loss</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Workout Duration (minutes)</label>
+                            <input type="number" id="time" min="20" max="120" required>
+                        </div>
+                        <button type="button" class="btn next-step" data-next="2">Continue</button>
+                    </form>
+                </div>
+
+                <!-- Step 2: Select Exercises -->
+                <div class="step-panel" data-step="2">
+                    <div class="planner-instructions">
+                        <p>Select exercises for your workout. We'll recommend based on your fitness level and goals.</p>
+                    </div>
+                    
+                    <div class="planner-equipment-tabs">
+                        <button class="tab-btn active" data-category="free-weights">Free Weights</button>
+                        <button class="tab-btn" data-category="machines">Machines</button>
+                        <button class="tab-btn" data-category="cardio">Cardio</button>
+                    </div>
+
+                    <div class="planner-exercises">
+                        <!-- Free Weights exercises -->
+                        <div class="planner-category active" id="planner-free-weights">
+                            <div class="planner-exercise" data-id="1" data-name="Dumbbell Bench Press" data-muscle="Chest" data-level="intermediate">
+                                <h3>Dumbbell Bench Press</h3>
+                                <span class="muscle">Chest</span>
+                                <button class="btn add-to-plan">Add</button>
+                            </div>
+                            <div class="planner-exercise" data-id="2" data-name="Barbell Squat" data-muscle="Legs" data-level="advanced">
+                                <h3>Barbell Squat</h3>
+                                <span class="muscle">Legs</span>
+                                <button class="btn add-to-plan">Add</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Machines exercises -->
+                        <div class="planner-category" id="planner-machines">
+                            <div class="planner-exercise" data-id="3" data-name="Lat Pulldown" data-muscle="Back" data-level="beginner">
+                                <h3>Lat Pulldown</h3>
+                                <span class="muscle">Back</span>
+                                <button class="btn add-to-plan">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="selected-exercises">
+                        <h3>Your Selected Exercises</h3>
+                        <div class="selected-list">
+                            <!-- Exercises will be added here dynamically -->
+                            <p class="empty-message">No exercises selected yet</p>
+                        </div>
+                        <button type="button" class="btn next-step" data-next="3">Generate Workout Plan</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Workout Plan -->
+                <div class="step-panel" data-step="3">
+                    <div class="workout-plan">
+                        <h3>Your Custom Workout Plan</h3>
+                        <div id="user-plan-details">
+                            <!-- User details will be inserted here -->
+                        </div>
+                        <div id="workout-plan-exercises">
+                            <!-- Exercises will be inserted here -->
+                        </div>
+                        <div class="plan-actions">
+                            <button type="button" class="btn back-step" data-prev="2">Back</button>
+                            <button type="button" class="btn print-plan">Print Plan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2>Contact Our Trainers</h2>
+            <div class="contact-info">
+                <div class="contact-method">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>(555) 123-4567</p>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>trainers@fitflexgym.com</p>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Location</h3>
+                    <p>123 Fitness Street, Gym City</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 FitFlex Gym. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
